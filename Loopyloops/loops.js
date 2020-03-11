@@ -27,35 +27,59 @@ if (len1 > len2) {
     document.write(`The navigator has the longest name, it has ${len2} characters.<br>`);
 } else {
     console.log(`Wow, you both have equally long names, ${len1} characters.<br>`);
+    document.write(`Wow, you both have equally long names, ${len2} characters.<br>`);
 }
 
 // 2.2. Check if the string contains vowels or not.
 // - If it contains vowels, print the number of name, and also print the vowel letters along with the vowel characters. or
 // - print no vowels
+
 var a = 0,
     e = 0,
     i = 0,
     o = 0,
-    u = 0;
+    u = 0,
+    n = len1 + len2;
+for (let l = 0; l <= n; l++) {
+    if (Prograd_1[l] == 'a' || Prograd_1[l] == 'A') {
+        a++;
 
-for (let i = 0; i <= (len1 || len2); i++) {
-    if ((Prograd_1[i] == 'a' || Prograd_1[i] == 'A') || (Prograd_2[i] == 'a' || Prograd_2[i] == 'A')) {
+    }
+    if (Prograd_1[l] == 'e' || Prograd_1[l] == 'E') {
+        e++;
+
+    }
+    if (Prograd_1[l] == 'i' || Prograd_1[l] == 'I') {
+        i++;
+
+    }
+    if (Prograd_1[l] == 'o' || Prograd_1[l] == 'O') {
+        o++;
+
+    }
+    if (Prograd_1[l] == 'u' || Prograd_1[l] == 'U') {
+        u++;
+
+    }
+    if (Prograd_2[l] == 'a' || Prograd_2[l] == 'A') {
         a++;
     }
-    if ((Prograd_1[i] == 'e' || Prograd_1[i] == 'E') || (Prograd_2[i] == 'e' || Prograd_2[i] == 'E')) {
+    if (Prograd_2[l] == 'e' || Prograd_2[l] == 'E') {
         e++;
     }
-    if ((Prograd_1[i] == 'i' || Prograd_1[i] == 'I') || (Prograd_2[i] == 'i' || Prograd_2[i] == 'I')) {
+    if (Prograd_2[l] == 'i' || Prograd_2[l] == 'I') {
         i++;
     }
-    if ((Prograd_1[i] == 'o' || Prograd_1[i] == 'O') || (Prograd_2[i] == 'o' || Prograd_2[i] == 'O')) {
+    if (Prograd_2[l] == 'o' || Prograd_2[l] == 'O') {
         o++;
     }
-    if ((Prograd_1[i] == 'u' || Prograd_1[i] == 'U') || (Prograd_2[i] == 'u' || Prograd_2[i] == 'U')) {
+    if (Prograd_2[l] == 'u' || Prograd_2[l] == 'U') {
         u++;
     }
-}
 
+}
+console.log("Total number of vowels list")
+document.write(`Total number of list <br>`);
 
 if (a > 0) {
     console.log(`a : ${a}`);
@@ -65,6 +89,7 @@ if (e > 0) {
     console.log(`e : ${e}`);
     document.write(`e : ${e}<br>`);
 }
+
 if (i > 0) {
     console.log(`i : ${i}`);
     document.write(`i : ${i}<br>`);
@@ -76,7 +101,7 @@ if (o > 0) {
 if (u > 0) {
     console.log(`u : ${u}`);
     document.write(`u : ${u}<br>`);
-} else if (a, e, i, o, u, s = 0) {
+} else {
     console.log("No vowels")
     document.write(`No vowels. <br>`);
 }
@@ -86,8 +111,8 @@ if (u > 0) {
 // - Print the number of lower case characters
 var c = 0;
 var d = 0;
-for (let i = 0; i < len1; i++) {
-    if (Prograd_1.charCodeAt(i) < 97) {
+for (let l = 0; l < len1; l++) {
+    if (Prograd_1.charCodeAt(l) < 97) {
         c = c + 1;
     } else {
         d = d + 1;
@@ -102,7 +127,7 @@ document.write("LowerCase : " + d + ". <br>");
 // Progression 3: Control Statements - 2
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 var str1 = "";
-for (let i = 0; i < len1; i++) {
+for (let l = 0; l < len1; l++) {
     str1 = str1 + " " + Prograd_1.charAt(i);
 }
 console.log(str1.toUpperCase());
@@ -147,11 +172,11 @@ if (Prograd_1.charCodeAt(0) < Prograd_2.charCodeAt(0)) {
 // Make your program count the number of times the Latin word et appears.
 var par = " et Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit voluptates corrupti magnam velit eveniet explicabo rerum et. Sequi placeat a eos consequuntur porro fuga, quasi ducimus temporibus eveniet laboriosam incidunt reprehenderit. Maiores architecto repellendus illum maxime voluptas rerum, hic aperiam illo dolore, facilis sit placeat suscipit incidunt quasi pariatur qui nemo dicta reiciendis eos fugit? Tempore et dolore sit sed quam molestiae!Dignissimos, corrupti odio voluptatem in eum rerum atque delectus sunt nesciunt officiis alias quam minus quisquam repellat esse, quo nihil possimus laboriosam eveniet laudantium tempore fugit aliquid excepturi impedit! Repellat.";
 
-var a = par.split(" ");
+var p = par.split(" ");
 var len = par.split(" ").length;
 let count = 0;
-for (var i = 0; i < len; i++) {
-    if (a[i] == "et" || a[i] == "et.") {
+for (var l = 0; l < len; l++) {
+    if (p[i] == "et" || p[i] == "et.") {
         count++;
     }
 }
