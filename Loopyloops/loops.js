@@ -27,7 +27,7 @@ if (len1 > len2) {
     document.write(`The navigator has the longest name, it has ${len2} characters.<br>`);
 } else {
     console.log(`Wow, you both have equally long names, ${len1} characters.<br>`);
-    document.write(`Wow, you both have equally long names, ${len2} characters.<br>`);
+    document.write(`Wow, you both have equally long names, ${len1} characters.<br>`);
 }
 
 // 2.2. Check if the string contains vowels or not.
@@ -111,7 +111,7 @@ if (u > 0) {
 // - Print the number of lower case characters
 var c = 0;
 var d = 0;
-for (let l = 0; l < len1; l++) {
+for (let l = 0; l < n; l++) {
     if (Prograd_1.charCodeAt(l) < 97) {
         c = c + 1;
     } else {
@@ -128,7 +128,7 @@ document.write("LowerCase : " + d + ". <br>");
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "ProGrad"
 var str1 = "";
 for (let l = 0; l < len1; l++) {
-    str1 = str1 + " " + Prograd_1.charAt(i);
+    str1 = str1 + " " + Prograd_1.charAt(l);
 }
 console.log(str1.toUpperCase());
 document.write(`Driver's name in capital: ${str1.toUpperCase()} <br>`);
@@ -176,7 +176,7 @@ var p = par.split(" ");
 var len = par.split(" ").length;
 let count = 0;
 for (var l = 0; l < len; l++) {
-    if (p[i] == "et" || p[i] == "et.") {
+    if (p[l] == "et" || p[l] == "et.") {
         count++;
     }
 }
